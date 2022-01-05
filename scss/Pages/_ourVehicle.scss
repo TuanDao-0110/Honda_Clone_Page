@@ -1,0 +1,148 @@
+#our-vehicles {
+    // height: 800px;
+    h1 {
+        font-size: $font-size-4;
+        color: $color-blue-200;
+        text-transform: capitalize;
+        margin: $mg-3 0 $mg-5 0;
+    }
+    //
+    .carousel-indicator-xs {
+        text-transform: capitalize;
+        width: 60%;
+        margin: auto;
+        background-color: $color-white;
+        border: $border-1;
+        
+        .indicators-xs-header {
+            cursor: pointer;
+
+            h1 {
+                font-size: $font-size-1 - 0.2;
+                margin: $mg-1;
+                color: $color-blue-100;
+                font-weight: $font-weight-300;
+                padding: $pd-2;
+                span {
+                    font-weight: $font-weight-bold;
+                    color: $color-dark-blue-200;
+                }
+            }
+            i {
+                font-size: $font-size-3 + 0.7;
+                color: $color-blue-100;
+                transition: all 0.5s;
+            }
+            .transform-rotate {
+                transform: rotate(180deg);
+            }
+        }
+
+        ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border-top: $border-3;
+            display: none;
+            li {
+                color: $color-dark-blue-200;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-1;
+                padding: $pd-2;
+                cursor: pointer;
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        i {
+            font-size: $font-size-5;
+            // top: 45%;
+            background-color: $color-blue-overlay;
+            padding: $pd-3 $pd-2;
+            border-radius: 0.5rem;
+        }
+    }
+    .carousel-indicators-config {
+        margin: 0 auto $mg-1 auto;
+        li {
+            color: $color-dark-blue-200;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-1;
+            text-transform: capitalize;
+            padding: $pd-1 $pd-2;
+            border-radius: 4rem;
+            cursor: pointer;
+            &.active {
+                color: $color-white;
+                background-color: $color-blue-200;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                &::after {
+                    content: "";
+                    border-top: 15px solid $color-white;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    position: absolute;
+                    bottom: -40%;
+                    z-index: 8;
+                }
+            }
+        }
+    }
+    .carousel-caption-config {
+        width: 30%;
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        color: $color-white;
+        text-transform: capitalize;
+        font-size: $font-size-1;
+        > p {
+            font-weight: $font-weight-bold;
+            span {
+                font-weight: normal;
+            }
+        }
+        img {
+            width: 70%;
+            transform: translateX($pd-2 * (-1));
+        }
+        .caption-content {
+            font-weight: $font-weight-300;
+            text-align: justify;
+            margin-bottom: $mg-3;
+        }
+        .carousel-caption-detail {
+            margin-bottom: $mg-3;
+            .carousel-detail-content {
+                h2 {
+                    font-weight: $font-weight-300;
+                    font-size: $font-size-5;
+                }
+                p {
+                    font-size: $font-size-1;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+        .carousel_line {
+            width: 50%;
+            height: 0.2rem;
+        }
+        .carousel_caption_footer {
+            // width: 50%;
+            align-items: center;
+            position: absolute;
+            bottom: -22%;
+            left: 0%;
+            border-top: $border-2;
+            a {
+                font-size: $font-size-1;
+                font-weight: $font-weight-bold;
+                color: $color-white;
+            }
+        }
+    }
+}

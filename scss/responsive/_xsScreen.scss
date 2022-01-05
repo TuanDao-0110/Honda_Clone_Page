@@ -1,0 +1,90 @@
+#navbar {
+    a {
+        @media screen and (max-width: 576px) {
+            padding: $pd-1 $pd-2;
+        }
+    }
+    a:first-of-type {
+        @media screen and (max-width: 576px) {
+            padding: $pd-1 $pd-2;
+        }
+    }
+    .navbar-collapse {
+        @media screen and (max-width: 576px) {
+            border-top: $border-2;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    #vehicles {
+        #vehicle-content {
+            .vehicle-nav {
+                ul li {
+                    display: inline-block;
+                    margin-bottom: $mg-3;
+                    a {
+                        padding: $pd-1 $pd-2;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    #swiper-slider {
+        margin-top: $mg-5 + 2;
+    }
+
+    // 4. My Vehicles
+    #our-vehicles {
+
+        #our-vehicles-slide {
+            .carousel-indicator-xs {
+                position: absolute;
+               top: 0%;
+               left: 20%;
+               z-index: 9;
+            }
+            .carousel-indicators-config {
+                li {
+                    font-size: $font-size-1 - 2;
+                }
+            }
+            .carousel-caption-config {
+                width: 70%;
+                margin-left: 15%;
+                margin-right: 15%;
+                text-align: center;
+                bottom: unset;
+                top: 40%;
+
+                .carousel-caption-detail {
+                    margin: 0;
+                    .carousel-detail-content {
+                        h2 {
+                            font-size: $font-size-2;
+                        }
+                    }
+                }
+
+                .carousel_caption_footer {
+                    border: none;
+                    width: 100%;
+                    justify-content: center;
+                    bottom: -20%;
+                    img {
+                        display: none;
+                    }
+                }
+            }
+            .carousel-control-next {
+                right: 1rem;
+            }
+            .carousel-control-prev {
+                left: 1rem;
+            }
+            .carousel-inner{ 
+                top: $mg-3;
+            }
+        }
+    }
+}

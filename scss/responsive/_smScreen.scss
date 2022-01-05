@@ -1,0 +1,47 @@
+#navbar {
+    a {
+        @media screen and (max-width: 768px) {
+            padding: $pd-1 $pd-2;
+        }
+    }
+    a:first-of-type {
+        @media screen and (max-width: 768px) {
+            padding: $pd-1 $pd-2;
+        }
+    }
+    .navbar-collapse {
+        @media screen and (max-width: 768px) {
+            // border-top: $border-2;
+        }
+    }
+    .discover-menu {
+        &::before {
+            @media screen and (max-width: 768px) {
+                @include arrow(10%, unset);
+                top: 4.5rem;
+            }
+        }
+    }
+}
+
+#search-area {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #intro {
+        .intro-container {
+            .intro-right {
+                background: url("../../img/our-vehicles-intro-2.jpg") center center;
+                background-size: cover;
+                background-clip: content-box;
+                .intro-right-content {
+                    width: 40%;
+                    left: 5%;
+                }
+            }
+        }
+    }
+}

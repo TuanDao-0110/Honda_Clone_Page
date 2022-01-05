@@ -1,0 +1,44 @@
+@mixin button($border, $bg, $textcolor, $pd, $bg-hover, $color-hover) {
+    border: 3px solid $border;
+    border-radius: 40px;
+    background-color: $bg;
+    color: $textcolor;
+    font-weight: $font-weight-bold;
+    padding: $pd;
+    text-transform: uppercase;
+    font-size: $font-size-1;
+
+    &:hover {
+        background-color: $bg-hover;
+        color: $color-hover;
+    }
+}
+
+.btn-vehicle {
+    @include button($color-blue-100, $color-blue-100, $color-white, $pd-1 $pd-5, $color-white, $color-blue-100);
+    margin-right: $mg-1;
+}
+.btn-vehicle-active {
+    @include button($color-blue-200, $color-white, $color-blue-100, $pd-1 $pd-5, $color-blue-200, $color-white);
+}
+.btn-search {
+    @include button($color-blue-200, none, $color-blue-100, $pd-1 $pd-5, $color-blue-200, $color-white);
+}
+.btn-carousel {
+    @include button($color-orange, $color-orange, $color-white, $pd-1 $pd-2, $color-white, $color-orange);
+}
+
+.btn-go {
+    @include button($color-blue-100, $color-blue-200, $color-white, $pd-1 $pd-2, transparent, $color-blue-100);
+}
+
+.btn-build {
+    @include button($color-white, transparent, $color-white, $pd-1, $color-white, $color-blue-200);
+}
+.btn-caption {
+    padding: $pd-1 $pd-4;
+    @media screen and (max-width:576px) {
+        font-size: $font-size-1 - 0.2;
+        padding: $pd-1 $pd-3;
+    }
+}

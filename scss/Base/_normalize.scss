@@ -1,0 +1,22 @@
+.animated {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+//---------------------- Bootrap Customize ----------------------
+.carousel {
+    overflow: hidden;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%;
+}
+.carousel-control-next {
+    right: -1.5rem;
+    
+}
+.carousel-control-prev {
+    left: -1.5rem;
+}
