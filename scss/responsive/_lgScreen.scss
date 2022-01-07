@@ -11,3 +11,31 @@
         }
     }
 }
+@media screen and (max-width: 1300px) {
+    #search-field {
+        padding: 0 $pd-2;
+        text-transform: capitalize;
+        flex-wrap: wrap;
+        div {
+            width: 85%;
+            border-bottom: $border-3;
+            border-right: none;
+            input {
+                width: 70%;
+                font-size: $font-size-1;
+                &::placeholder {
+                    text-transform: capitalize;
+                    font-size: $font-size-3;
+                }
+            }
+            .btn-search {
+                // border-color: $color-blue-100;
+                border-radius: 40px;
+                color: $color-blue-200;
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,12 @@
+#header {
+    .animated {
+        -webkit-animation-duration: 0.2s;
+        animation-duration: 0.3s;
+    }
+}
+
 .animated {
-    -webkit-animation-duration: 0.2s;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -15,8 +21,10 @@
 }
 .carousel-control-next {
     right: -1.5rem;
-    
 }
 .carousel-control-prev {
     left: -1.5rem;
+}
+.img-fluid {
+    width: 100% !important;
 }

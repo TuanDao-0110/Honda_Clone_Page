@@ -42,11 +42,98 @@
                 .intro-right-content {
                     width: 80%;
                     left: 10%;
-                h4 { 
-                    width: 50%;
+                    h4 {
+                        width: 50%;
+                    }
                 }
+            }
+        }
+    }
+    #our-vehicles .carousel .carousel-inner .carousel-item .carousel-caption-config {
+        width: 50%;
+        top: 10%;
+        left: 4%;
+    }
+    #our-vehicles {
+        #vehicle-function {
+            .pd-col {
+                .function {
+                    background-position: center 0.5rem;
+                    div {
+                        top: 35%;
+                        h3 {
+                            font-size: $font-size-1;
+                            width: 100%;
+                        }
+                        p {
+                        }
+                    }
                 }
+            }
+        }
+    }
 
+    #search-field {
+        padding: 0;
+        text-transform: capitalize;
+        flex-wrap: wrap;
+        div {
+            width: 100%;
+            border-bottom: $border-3;
+            border-right: none;
+            input {
+                width: 70%;
+                font-size: $font-size-1;
+                &::placeholder {
+                    text-transform: capitalize;
+                    font-size: $font-size-1;
+                }
+            }
+            .btn-search {
+                // border-color: $color-blue-100;
+                border-radius: 40px;
+                color: $color-blue-200;
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+        .search-field-right {
+            text-align: center;
+        }
+    }
+    #footer {
+        background-color: $color-white;
+        padding: 0;
+        .footer-detail {
+            width: 25%;
+        }
+    }
+    #copy-right {
+        .copy-right-left {
+            p {
+                font-size: $font-size-1;
+            }
+        }
+        .copy-right-right {
+            ul {
+                justify-content: flex-end;
+                & > li:first-child {
+                    padding: 0;
+                }
+                li {
+                    padding: 0 $pd-1;
+                    margin: 0 $mg-1;
+
+                    a {
+                        font-size: $font-size-1 - 0.2rem;
+                    }
+                }
+            }
+        }
+        .logo-footer {
+            img {
+                height: 40px;
             }
         }
     }

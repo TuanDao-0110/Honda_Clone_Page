@@ -1,15 +1,5 @@
+// Call WOW
 new WOW().init();
-// var swiper = new Swiper(".swiper-container", {
-//   centeredSlides: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
 
 // 1.1 SCROll Bar for VEHICLE's Menu  theme
 $("#vehicle-list").mCustomScrollbar({
@@ -133,41 +123,51 @@ $(".carousel-indicator-xs ol li").click(function () {
   $(".indicators-xs-header i").addClass("transform-rotate");
 });
 
-var count = 0;
-$(".carousel-control-prev").click(function () {
-  $(".carousel-indicators-config li").removeClass("active");
-  if (count == 0) {
-    count = 4;
-  } else {
-    count--;
-  }
-  $(".carousel-indicators-config li").each(function (i) {
-    if (i == count) {
-      $(this).addClass("active");
-      $(".indicators-title span").html($(this).html());
+//4.3 INSTALLING AGAINT INDICATOR FOR VEHICLES
+let setActiveClassForIndicator = () => {
+  setInterval(() => {
+    let listItem = $(".carousel-inner .carousel-item");
+    let listIndicator = $(".carousel-indicators-config li");
+    $(".carousel-indicators-config li").removeClass("active");
+    let listXS = $(".carousel-indicator-xs ol li");
+
+    let count = 0;
+    for (let item of listItem) {
+      if (item.classList.contains("active")) {
+        listIndicator[count].classList.add("active");
+        let temp = listXS[count].innerHTML;
+        $("#indicators-tittle-span").html(temp);
+      }
+      count++;
     }
-  });
+  }, 50);
+};
+// 4.4 Setting time lap against for carousel
+$(".carousel").carousel({
+  interval: 10000,
 });
-$(".carousel-control-next").click(function () {
-  $(".carousel-indicators-config li").removeClass("active");
-  if (count == 4) {
-    count = 0;
-  } else {
-    count++;
-  }
-  $(".carousel-indicators-config li").each(function (i) {
-    if (i == count) {
-      $(this).addClass("active");
-      $(".indicators-title span").html($(this).html());
-    }
-  });
-});
+setActiveClassForIndicator();
+
+// 5. Shorten for social media link
+let changeShorterLink = () => {
+  let temp = $(".social-link").html();
+  let short = temp.slice(0, 50);
+  console.log(short);
+  $(".social-link").html(`${short}....`);
+};
+
+changeShorterLink();
+
+// 6. Set back to top
+
 $(".back-to-top").click(function () {
   $("body,html").animate({ scrollTop: 0 }, 1000);
 });
+// 7. Set up  collapse for footerDetails
+
 function collapse() {
   var width = $(window).width();
-  console.log(width);
+  console.log("screen size", width);
   if (width >= 750) {
     $(".collapse-ul").removeClass("collapse");
   }
@@ -175,9 +175,10 @@ function collapse() {
     $(".collapse-ul").addClass("collapse");
   }
 }
-$(window).resize(function () {
+
+$(window).resize(() => {
   collapse();
 });
-$(document).ready(function () {
+$(document).ready(() => {
   collapse();
 });

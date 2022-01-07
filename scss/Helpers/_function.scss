@@ -34,3 +34,46 @@
 		}
 	}
 }
+// create background for OUR Vehicles
+
+@each $stt, $img in (1, slider-1) (2, slider-2) (3, slider-3) (4, slider-4) (5, slider-5) {
+	.carousel-inner {
+		.item-#{$stt} {
+			background: url("../../img/#{$img}.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			@media screen and (max-width: 768px) {
+				background: url("../../img/#{$img}-xs.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: unset;
+				width: 100%;
+			}
+			@media screen and(max-width:576px) {
+				background: url("../../img/#{$img}-xs.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@each $stt, $img in (1, item-1) (2, item-2) (3, item-3) (4, item-4) {
+	.function-#{$stt} {
+		background: url("../../img/#{$img}.jpg") $color-white;
+		background-size: 150%;
+		background-repeat: no-repeat;
+		background-position: center 1rem;
+	}
+}
+@each $stt, $img in (1, discover-1) (2, discover-2) (3, discover-3) (4, discover-4) (5, discover-5) {
+	.discover-item-#{$stt} {
+		background: url("../../img/#{$img}.jpg") $color-white;
+		background-size: 150%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}

@@ -31,13 +31,16 @@
 .btn-go {
     @include button($color-blue-100, $color-blue-200, $color-white, $pd-1 $pd-2, transparent, $color-blue-100);
 }
+.btn-go-orange {
+    @include button($color-orange, $color-orange, $color-white, $pd-1 $pd-2, $color-white, $color-orange);
+}
 
 .btn-build {
     @include button($color-white, transparent, $color-white, $pd-1, $color-white, $color-blue-200);
 }
 .btn-caption {
     padding: $pd-1 $pd-4;
-    @media screen and (max-width:576px) {
+    @media screen and (max-width: 576px) {
         font-size: $font-size-1 - 0.2;
         padding: $pd-1 $pd-3;
     }

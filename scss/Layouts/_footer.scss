@@ -1,0 +1,87 @@
+#footer {
+    padding: $pd-5 $pd-8;
+    background-color: $color-grey;
+    flex-wrap: wrap;
+    .footer-detail {
+        h1 {
+            @include text($font-weight-bold, $mg-2);
+            font-size: $font-size-2;
+            color: $color-dark-blue-200;
+        }
+        ul {
+            li {
+                margin-bottom: $mg-1;
+                a {
+                    font-size: $font-size-1;
+                    color: $color-blue-200;
+                }
+            }
+        }
+    }
+    .footer-touch {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: $mg-3;
+        border-top: $border-2;
+        padding: $pd-3 0;
+        .touch-left {
+            h1 {
+                @include text($font-weight-bold, $mg-1);
+            }
+            i {
+                @include social-icon();
+            }
+        }
+        .touch-right {
+            text-align: right;
+            p {
+                font-size: $font-size-1;
+                color: $color-dark-blue-200;
+                margin-bottom: $mg-2;
+            }
+            button {
+                margin-top: 0;
+            }
+        }
+    }
+}
+#copy-right {
+    background-color: $color-blue-100;
+    @include section-padding;
+    padding: $pd-2;
+    .copy-right-left {
+        p {
+            font-size: $font-size-1;
+            color: $color-grey;
+            a {
+                color: $color-grey;
+                text-decoration: underline;
+                font-style: italic;
+            }
+        }
+    }
+    .copy-right-right {
+        ul {
+            justify-content: flex-end;
+            li {
+                padding: 0 $pd-2;
+                border-left: $border-3;
+                a {
+                    font-size: $font-size-1;
+                    color: $color-grey;
+                }
+            }
+            & > li:first-child {
+                border: none;
+            }
+        }
+    }
+    .logo-footer {
+        margin-top: $mg-3;
+        img {
+            max-width: 50%;
+            height: 4rem;
+        }
+    }
+}

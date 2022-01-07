@@ -36,13 +36,16 @@
 
     // 4. My Vehicles
     #our-vehicles {
-
+        h1 {
+            font-size: $font-size-3;
+            margin-bottom: $mg-2;
+        }
         #our-vehicles-slide {
             .carousel-indicator-xs {
                 position: absolute;
-               top: 0%;
-               left: 20%;
-               z-index: 9;
+                top: 0%;
+                left: 20%;
+                z-index: 9;
             }
             .carousel-indicators-config {
                 li {
@@ -82,8 +85,133 @@
             .carousel-control-prev {
                 left: 1rem;
             }
-            .carousel-inner{ 
+            .carousel-inner {
                 top: $mg-3;
+            }
+        }
+        #vehicle-function {
+            .pd-col {
+                .function {
+                    background-position: center -6rem;
+                }
+            }
+        }
+    }
+    .intro {
+        .intro-container {
+            .intro-right {
+                margin-top: $mg-2;
+            }
+        }
+    }
+
+    #search-field {
+        padding: 0;
+        text-transform: capitalize;
+        flex-wrap: wrap;
+        div {
+            padding: $pd-1 0;
+            width: 100%;
+            border-right: none;
+            border-top: $border-3;
+            input {
+                width: 60%;
+                font-size: $font-size-1;
+                &::placeholder {
+                    text-transform: capitalize;
+                    font-size: $font-size-1;
+                }
+            }
+            .btn-search {
+                border-color: $color-blue-100;
+                border-radius: 40px;
+                color: $color-blue-200;
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+        .search-field-right {
+            padding: $pd-2;
+            text-align: center;
+        }
+    }
+    #footer {
+        background-color: $color-white;
+        .footer-detail {
+            width: 100%;
+
+            h1 {
+                margin-bottom: $mg-1 - 3;
+                background-color: $color-grey;
+                padding: $pd-3 $pd-2;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                i {
+                    @include social-icon;
+                    color: $color-blue-200;
+                    background-color: transparent;
+                    border: $border-1;
+                }
+            }
+            ul {
+                padding: $pd-3;
+                li {
+                }
+            }
+        }
+        .footer-touch {
+            flex-wrap: wrap;
+            .footer-left,
+            .touch-right {
+                width: 100%;
+                text-align: left;
+                padding: $pd-2 $pd-3;
+            }
+            .touch-right {
+                .btn-search {
+                    border-color: $color-blue-100;
+
+                    border-radius: 40px;
+                    color: $color-blue-200;
+                    &:hover {
+                        background-color: $color-blue-100;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    #copy-right {
+        .copy-right-left {
+            p {
+                font-size: $font-size-1 - 0.2rem;
+            }
+        }
+        .copy-right-right {
+            ul {
+                justify-content: flex-start;
+                & > li:first-child {
+                    padding: 0;
+                }
+                li {
+                    padding: 0 $pd-1;
+                    a {
+                        font-size: $font-size-1 - 0.2rem;
+                    }
+                }
+            }
+        }
+        .logo-footer {
+            flex-wrap: wrap;
+            justify-content: center;
+            & > img:first-child {
+                display: inline;
+            }
+            img {
+                display: none;
             }
         }
     }
