@@ -2,8 +2,8 @@
 
 Project include : SASS, HTML, JS ES6, Jquery.
 
+visit at : 
 
-Some picture will be missing if what by Github.deployment function, 
 
 https://honda-clone-page.pages.dev/
 
